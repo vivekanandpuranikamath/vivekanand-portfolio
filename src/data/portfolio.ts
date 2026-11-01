@@ -10,7 +10,7 @@ export const profile = {
   domain: "Full Stack Web Development",
   availability: "Open for opportunities",
   resumeUrl:
-    "https://drive.google.com/file/d/1a759Z-eY6zrsFXPSGl5N7NhIP8ShlYPZ/view?usp=drive_link",
+    "https://drive.google.com/file/d/1qsnCWAAnCrWDWOkuLaKL_mtppHz4Wn6U/view?usp=sharing",
   logoUrl: "https://tapportfolio.lovable.app/assets/logo-CxDGoOCE.png",
   socials: {
     linkedin: "https://www.linkedin.com/in/vivekanandpuranikamath/",
