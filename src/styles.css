@@ -89,7 +89,7 @@
   --border: oklch(1 0 0 / 9%);
   --input: oklch(1 0 0 / 12%);
   --ring: oklch(0.83 0.14 205);
-  --glass: oklch(0.22 0.03 252 / 45%);
+  --glass: oklch(0.2 0.03 252 / 62%);
   --glass-border: oklch(1 0 0 / 10%);
 
   --gradient-brand: linear-gradient(120deg, var(--primary) 0%, var(--primary-glow) 45%, var(--accent) 100%);
