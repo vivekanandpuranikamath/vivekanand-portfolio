@@ -8,7 +8,7 @@ function useTyping(words: string[], typeMs = 85, deleteMs = 45, holdMs = 1600) {
   const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
-    const word = words[index % words.length];
+    const word = words[index % words.length] ?? "";
     let t: ReturnType<typeof setTimeout>;
     if (!deleting && text === word) {
       t = setTimeout(() => setDeleting(true), holdMs);
