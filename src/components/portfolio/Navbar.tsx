@@ -36,13 +36,10 @@ export function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
       <nav
         className={cn(
-          "mx-auto flex max-w-6xl items-center justify-between rounded-2xl px-4 py-2.5 transition-all duration-500",
+          "mx-auto flex max-w-6xl items-center justify-between lg:justify-center lg:gap-8 rounded-2xl px-4 py-2.5 transition-all duration-500",
           scrolled ? "glass shadow-glow" : "border border-transparent",
         )}
       >
-        <a href="#top" aria-label="Back to top" className="flex items-center transition-transform hover:scale-105">
-          <img src={profile.logoUrl} alt="TAP Academy" className="h-9 w-auto md:h-10" />
-        </a>
 
         <ul className="hidden items-center gap-1 lg:flex">
           {navLinks.map((l) => (
