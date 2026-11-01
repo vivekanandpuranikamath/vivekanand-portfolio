@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowUpRight, Github, Linkedin, MapPin, Terminal } from "lucide-react";
 import { profile } from "@/data/portfolio";
+import profilePhoto from "@/assets/profile.jpg.asset.json";
 
 function useTyping(words: string[], typeMs = 85, deleteMs = 45, holdMs = 1600) {
   const [index, setIndex] = useState(0);
@@ -105,8 +106,11 @@ export function Hero() {
             <div className="absolute inset-0 animate-spin-slow rounded-full bg-gradient-brand p-[3px] opacity-90 blur-[2px]" />
             <div className="absolute inset-0 rounded-full bg-gradient-brand opacity-40 blur-3xl" />
             <div className="absolute inset-[4px] flex items-center justify-center overflow-hidden rounded-full bg-card">
-              <div className="absolute inset-0 bg-grid opacity-60" />
-              <span className="relative font-display text-8xl font-bold text-gradient-brand">VP</span>
+              <img
+                src={profilePhoto.url}
+                alt={profile.name}
+                className="h-full w-full object-cover object-top"
+              />
             </div>
 
             <div className="glass absolute -left-6 top-10 rounded-xl px-3 py-2 font-mono text-xs shadow-glow">
