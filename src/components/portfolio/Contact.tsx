@@ -14,13 +14,15 @@ const channels = [
   { label: "HackerRank", value: "vivekanandapura1", href: profile.socials.hackerrank, icon: Code2 },
 ];
 
+type FormErrors = Partial<Record<"name" | "email" | "message", string>>;
+
 export function Contact() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [errors, setErrors] = useState<FormErrors>({});
 
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
-    const next: Record<string, string> = {};
+    const next: FormErrors = {};
     if (!form.name.trim()) next.name = "Please enter your name";
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) next.email = "Please enter a valid email";
     if (form.message.trim().length < 10) next.message = "Message should be at least 10 characters";
@@ -131,7 +133,7 @@ export function Contact() {
   );
 }
 
-function Field({ label, error, children }: { label: string; error?: string; children: React.ReactNode }) {
+function Field({ label, error, children }: { label: string; error?: string | undefined; children: React.ReactNode }) {
   return (
     <label className="block">
       <span className="mb-2 block text-sm font-medium">{label}</span>
